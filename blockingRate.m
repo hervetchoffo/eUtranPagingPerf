@@ -6,8 +6,7 @@ function blockingRate()
 % update namespaces here ...
 USERPATH = userpath;
 USERPATH(length(USERPATH))= filesep;
-PREVIOUSPATH = addpath(genpath([USERPATH,'stdlib'])); % include "stdlib" namespace
-addpath(genpath(cd)); % include project namespace
+PREVIOUSPATH = addpath(genpath(cd)); % include project namespace
 
 % define system constants here ...
 global sysconst__;
