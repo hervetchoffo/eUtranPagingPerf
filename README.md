@@ -5,4 +5,4 @@ Simulation of eUtran paging performance:
 - scheduled paging records and related blocking
 - eUtran paging efficiency
 
-Two simulations are provided through the files "blockingRate.m" and "schedPageRecDist.m", both using the main function "eUtranPagingPerf.m". You can write your own simulation based on these two files as examples.
+Two MATLAB simulations are provided through the files "blockingRate.m" and "schedPageRecDist.m", both using the main function "eUtranPagingPerf.m". You can write your own simulations based on these two simulation files as examples.
