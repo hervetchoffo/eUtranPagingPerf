@@ -71,10 +71,10 @@ for i = 1:length(nB)
             plot(stats.schedRecDistDelay.class,[ones(1,nbDrxCycleSpl)/tDrxCycle,zeros(1,nbSamples-nbDrxCycleSpl)],'-k','Linewidth',2);
             xlabel('QUEUEING DELAY (s)');
             ylabel('FREQUENCY DENSITY');
-            title({'QUEUEING DELAY FREQUENCY DISTRIBUTION FUNCTION',['Rmax = ',num2str(maxPageRec(j)),' PAGING RECORDS - LAMBDA = ',num2str(lamda(k)),' PAGE/S - nB/T = ',num2str(nB(i)),' - DRX CYCLE = ',num2str(T),' RADIO FRAMES'],['MAX DELAY = ',num2str(maxDelay),'s - MEAN MEMORY LOAD = ',num2str(floor(100*meanMemoryLoad)),'%']});
+            title({'QUEUEING DELAY FREQUENCY DISTRIBUTION FUNCTION',['Rmax = ',num2str(maxPageRec(j)),' PAGING RECORDS - LAMBDA = ',num2str(lamda(k)),' PAGE/S - nB/T = ',num2str(nB(i)),' - DRX CYCLE = ',num2str(T),' RADIO FRAMES'],['MAX DELAY = ',num2str(maxDelay),'s - MEAN MEMORY LOAD = ',num2str(floor(100*avgMemoryLoad)),'%']});
             legend({'simulation','theory'});
             grid on;
-            fileName = ['QUEUEING_DELAY_FREQUENCY_DISTRIBUTION_FUNCTION_Rmax_',num2str(maxPageRec(j)),'PAGEREC_LAMBDA_',num2str(lamda(k)),'PAGEPERSEC_nB_T_',num2str(nB(i)),'_DRX_CYCLE_',num2str(T),'RF_MAX_DELAY_',num2str(maxDelay),'SEC_MEAN_MEMORY_LOAD_',num2str(floor(100*meanMemoryLoad)),'PERCENT'];
+            fileName = ['QUEUEING_DELAY_FREQUENCY_DISTRIBUTION_FUNCTION_Rmax_',num2str(maxPageRec(j)),'PAGEREC_LAMBDA_',num2str(lamda(k)),'PAGEPERSEC_nB_T_',num2str(nB(i)),'_DRX_CYCLE_',num2str(T),'RF_MAX_DELAY_',num2str(maxDelay),'SEC_MEAN_MEMORY_LOAD_',num2str(floor(100*avgMemoryLoad)),'PERCENT'];
             saveas(h,fileName,'jpg');
             saveas(h,fileName,'fig');
             
@@ -88,10 +88,10 @@ for i = 1:length(nB)
             bar(stats.schedRecDistNb.val,100*[stats.schedRecDistNb.freq',schedRecDistNbProb']);
             xlabel('SCHEDULED PAGING RECORDS (page/PO)');
             ylabel('FREQUENCY (%)');
-            title({'SCHEDULED PAGING RECORDS FREQUENCY DISTRIBUTION FUNCTION',['Rmax = ',num2str(maxPageRec(j)),' PAGING RECORDS - LAMBDA = ',num2str(lamda(k)),' PAGE/S - nB/T = ',num2str(nB(i)),' - DRX CYCLE = ',num2str(T),' RADIO FRAMES'],['MAX DELAY = ',num2str(maxDelay),'s - MEAN MEMORY LOAD = ',num2str(floor(100*meanMemoryLoad)),'%']});
+            title({'SCHEDULED PAGING RECORDS FREQUENCY DISTRIBUTION FUNCTION',['Rmax = ',num2str(maxPageRec(j)),' PAGING RECORDS - LAMBDA = ',num2str(lamda(k)),' PAGE/S - nB/T = ',num2str(nB(i)),' - DRX CYCLE = ',num2str(T),' RADIO FRAMES'],['MAX DELAY = ',num2str(maxDelay),'s - MEAN MEMORY LOAD = ',num2str(floor(100*avgMemoryLoad)),'%']});
             legend({'simulation','theory'});
             grid on;
-            fileName = ['SCHEDULED_PAGING_RECORDS_FREQUENCY_DISTRIBUTION_FUNCTION_Rmax_',num2str(maxPageRec(j)),'PAGEREC_LAMBDA_',num2str(lamda(k)),'PAGEPERSEC_nB_T_',num2str(nB(i)),'_DRX_CYCLE_',num2str(T),'RF_MAX_DELAY_',num2str(maxDelay),'SEC_MEAN_MEMORY_LOAD_',num2str(floor(100*meanMemoryLoad)),'PERCENT'];
+            fileName = ['SCHEDULED_PAGING_RECORDS_FREQUENCY_DISTRIBUTION_FUNCTION_Rmax_',num2str(maxPageRec(j)),'PAGEREC_LAMBDA_',num2str(lamda(k)),'PAGEPERSEC_nB_T_',num2str(nB(i)),'_DRX_CYCLE_',num2str(T),'RF_MAX_DELAY_',num2str(maxDelay),'SEC_MEAN_MEMORY_LOAD_',num2str(floor(100*avgMemoryLoad)),'PERCENT'];
             saveas(h,fileName,'jpg');
             saveas(h,fileName,'fig');
             
