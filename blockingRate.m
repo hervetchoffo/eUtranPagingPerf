@@ -81,10 +81,10 @@ for i=1:length(nB)
     end
     xlabel('PAGING REQUESTS RATE (page/s)');
     ylabel('PAGING BLOCKING RATE (%)');
-    title({'PAGING BLOCKING VS. ARRIVAL RATE',['nB/T = ',num2str(nB(i)),' - DRX CYCLE = ',num2str(T),' RADIO FRAMES'],['MAX DELAY = ',num2str(maxDelay),'s - MEAN MEMORY LOAD = ',num2str(floor(100*meanMemoryLoad)),'%']});
+    title({'PAGING BLOCKING VS. ARRIVAL RATE',['nB/T = ',num2str(nB(i)),' - DRX CYCLE = ',num2str(T),' RADIO FRAMES'],['MAX DELAY = ',num2str(maxDelay),'s - MEAN MEMORY LOAD = ',num2str(floor(100*avgMemoryLoad)),'%']});
     legend(strcat({'Rmax = '},num2str(maxPageRec')));
     grid on;
-    fileName = ['PAGING_BLOCKING_VS_ARRIVAL_RATE_nB_T_',num2str(32*nB(i)),'_32EME_DRX_CYCLE_',num2str(T),'RF_MAX_DELAY_',num2str(maxDelay),'s_MEAN_MEMORY_LOAD_',num2str(floor(100*meanMemoryLoad))];
+    fileName = ['PAGING_BLOCKING_VS_ARRIVAL_RATE_nB_T_',num2str(32*nB(i)),'_32EME_DRX_CYCLE_',num2str(T),'RF_MAX_DELAY_',num2str(maxDelay),'s_MEAN_MEMORY_LOAD_',num2str(floor(100*avgMemoryLoad))];
     saveas(h,fileName,'jpg');
     saveas(h,fileName,'fig');
     
@@ -96,10 +96,10 @@ for i=1:length(nB)
     end
     xlabel('PAGING REQUESTS RATE (page/s)');
     ylabel('PAGING EFFICIENCY (%)');
-    title({'PAGING EFFICIENCY VS. ARRIVAL RATE',['nB/T = ',num2str(nB(i)),' - DRX CYCLE = ',num2str(T),' RADIO FRAMES'],['MAX DELAY = ',num2str(maxDelay),'s - MEAN MEMORY LOAD = ',num2str(floor(100*meanMemoryLoad)),'%']});
+    title({'PAGING EFFICIENCY VS. ARRIVAL RATE',['nB/T = ',num2str(nB(i)),' - DRX CYCLE = ',num2str(T),' RADIO FRAMES'],['MAX DELAY = ',num2str(maxDelay),'s - MEAN MEMORY LOAD = ',num2str(floor(100*avgMemoryLoad)),'%']});
     legend(strcat({'Rmax = '},num2str(maxPageRec')));
     grid on;
-    fileName = ['PAGING_EFFICIENCY_VS_ARRIVAL_RATE_nB_T_',num2str(32*nB(i)),'_32EME_DRX_CYCLE_',num2str(T),'RF_MAX_DELAY_',num2str(maxDelay),'s_MEAN_MEMORY_LOAD_',num2str(floor(100*meanMemoryLoad))];
+    fileName = ['PAGING_EFFICIENCY_VS_ARRIVAL_RATE_nB_T_',num2str(32*nB(i)),'_32EME_DRX_CYCLE_',num2str(T),'RF_MAX_DELAY_',num2str(maxDelay),'s_MEAN_MEMORY_LOAD_',num2str(floor(100*avgMemoryLoad))];
     saveas(h,fileName,'jpg');
     saveas(h,fileName,'fig');   
 end
