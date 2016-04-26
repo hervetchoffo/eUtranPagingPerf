@@ -37,9 +37,7 @@ initobj();
 % place your code here ...
 
 % place your inputs here ...
-% nota bene: 
-% > nbEvents ~ nbPagingEvents(1+200nB/T/lamda)
-% > simulation time ~ 60000 events/min
+% nota bene: nbEvents ~ nbPagingEvents(1+200nB/T/lamda)
 nbPagingEvents = 100000; % number of paging requests in the simulation
 T = sysconst__.defaultPagingCycle.rf128; % number of radio frames/paging cycle
 nB = sysconst__.nB.oneT; % nB/T value
@@ -48,7 +46,7 @@ maxPageRec = 3; % maximum number of paging records in each PCCH message
 maxDelayFactor = 2; % maximum queueing delay of paging requests in term of paging cycles
 tho = 0; % radio ressource processing delay in term of TTIs
 samplingStep = .001; % sampling step for delay statistics (in seconds)
-avgMemoryLoad = .7; % average load for buffer size dimensioning
+avgMemoryLoad = .5; % average load for buffer size dimensioning
 
 tDrxCycle = T*sysconst__.rfDuration*sysconst__.TTI; % DRX cycle duration in seconds
 maxDelay = maxDelayFactor*tDrxCycle; % maximum queueing delay of paging requests (in seconds)
